@@ -11,8 +11,11 @@ const shoes = createSlice({
         buyShoes: (state) => {
             state.stock--;
         },
+        addStock: (state, actions) => {
+            state.stock = state.stock + parseInt(actions.payload);
+        },
     },
 });
 
-export const { buyShoes } = shoes.actions;
+export const { buyShoes, addStock } = shoes.actions;
 export default shoes.reducer;
