@@ -7,7 +7,12 @@ const initialState = {
 const shoes = createSlice({
     name: "shoes",
     initialState,
-    reducers: {},
+    reducers: {
+        buyShoes: (state) => {
+            state.stock--;
+        },
+    },
 });
 
+export const { buyShoes } = shoes.actions;
 export default shoes.reducer;
