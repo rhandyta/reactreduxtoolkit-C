@@ -15,7 +15,7 @@ function Users() {
 
     return (
         <div>
-            {users.isLoading === true ? (
+            {users.isLoading ? (
                 <p>Loading...</p>
             ) : (
                 <ul>
